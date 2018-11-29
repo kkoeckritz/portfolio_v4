@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!--Import Google Icon Font-->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	
 	<!--Import materialize, custom styles-->
 	<link type="text/css" rel="stylesheet" href="./assets/css/materialize.min.css"  media="screen,projection"/>
 	<link rel="stylesheet" href="./assets/css/style.css">
+
+	<!-- Import fonts -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anton|Dosis:700|Fjalla+One" rel="stylesheet">
 	
 	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,20 +16,77 @@
 </head>
 <body>
 	
-	<section id="intro" class="scrollspy"></section>
+	<!-- Bio -->
+	<section id="intro" class="scrollspy blue lighten-1"></section>
 	
+	<!-- navbar -->
 	<nav id="content">
-		<div class="nav-wrapper">
-			<ul id="nav-mobile">
-				<li><a href="#intro">My Story</a></li>
-				<li><a href="#badges">Projects</a></li>
-				<li><a href="#collapsible">Contact Me</a></li>
-			</ul>
+		<div class="nav-wrapper amber darken-1">
+			<div class="row">
+				<div class="col s6 offset-s3">
+					<div class="row">
+						<div class="col m6 s12">
+							<a href="#" id="nav_name" class="brand-logo left">
+								<span class="big_letter">Kris Koeckritz</span>
+							</a>
+						</div>
+						<div class="col m6 s12">
+							<a href="#" data-target="mobile-menu" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+							<ul id="nav-mobile" class="hide-on-med-and-down right">
+								<li><a href="#intro">Bio</a></li>
+								<li><a href="#portfolio">Projects</a></li>
+								<li><a href="#contact">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</nav>
 
-	<section id="badges" class="full_height scrollspy"></section>
-	<section id="collapsible" class="full_height scrollspy"></section>
+	<!-- sidenav for collapsed navbar -->
+	<ul id="mobile-menu" class="sidenav">
+		<li><a href="#intro">Bio</a></li>
+		<li><a href="#portfolio">Projects</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
+
+	<!-- Portfolio -->
+	<section id="portfolio" class="scrollspy blue darken-1">
+
+	</section>
+
+	<!-- Contact -->
+	<section id="contact" class="scrollspy blue darken-3">
+		<div class="valign-wrapper">
+			<div class="row valign">
+				<div class="col m12">
+					<h1 id="contact_header" class="center white-text">Contact Me</h1>
+					<hr>
+					<br>
+					<div class="row left">
+						<div class="col s12">
+							<a href="https://www.linkedin.com/in/kkoeckritz/" class="white-text contact_text">
+								<i class="small material-icons contact_icon white-text">assignment_ind</i>
+								linkedin.com/in/kkoeckritz/
+							</a>
+							<br>
+							<a href="mailto:kjkoec@gmail.com" class="white-text contact_text">
+								<i class="small material-icons contact_icon white-text">email</i>
+								kjkoec@gmail.com
+							</a>
+							<br>
+							<a href="tel:+15309038234" class="white-text contact_text">
+								<i id="phone_icon" class="small material-icons contact_icon white-text">local_phone</i>
+								(530) 903-8234
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
 	
 	<!--JavaScript at end of body for optimized loading-->
 	<script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js"></script>

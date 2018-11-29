@@ -1,21 +1,63 @@
 /* // Only necessary for window height sized blocks. */
-#intro {
-	height: 94vh;
-}
-
-.full_height {
-	height: 105vh;
-}
 
 a.active {
-	background-color: #ea454b;
+	background-color: #ff8f00;
 }
-/* #intro {
-	height: 200px;
-} */
-#badges {
-	background-color: yellow;
+
+.big_letter {
+	font-size: 30pt;
+	font-family: 'Fjalla One', sans-serif;
+	text-shadow: -2px 2px 1px #ff8f00;
 }
-#collapsible {
-	background-color: green;
+
+#intro {
+	height: calc(100vh - 64px);
+}
+
+#portfolio {
+	height: 100vh;
+}
+
+#contact {
+	height: 101vh;
+}
+
+.valign-wrapper {
+	height: 100%;
+}
+
+#contact_header {
+	font-family: 'Fjalla One', sans-serif;
+	font-weight: bold;
+}
+
+.contact_text {
+	margin: 0;
+	padding: 0;
+	font-size: 24pt;
+	line-height: 50px;
+	word-spacing: 20px;
+	font-weight: 100;
+	font-family: 'Fjalla One', sans-serif;
+	white-space: nowrap;
+}
+
+.contact_text:any-link {
+	text-decoration: none;
+}
+
+#phone_icon {
+	word-spacing: 5px;
+}
+
+/* mobile size fixes */
+@media only screen and (max-width: 600px) {
+    .big_letter {
+        font-size: 20pt;
+	}
+}
+@media only screen and (max-width: 600px) {
+    .big_letter {
+        font-size: 14pt;
+	}
 }
