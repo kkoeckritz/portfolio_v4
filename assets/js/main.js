@@ -1,18 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
-	var elems = document.querySelectorAll('.fixed-action-btn');
-	var instances = M.FloatingActionButton.init(elems, {
-		direction: 'bottom'
-	});
+$(document).ready(function(){
+	initPushpin();
 });
 
-// document.addEventListener('DOMContentLoaded', function() {
-// 	var elems = document.querySelectorAll('.tabs');
-// 	var instance = M.Tabs.init(elems, {
-// 	});
-// });
-
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.scrollspy');
-    var instances = M.ScrollSpy.init(elems, {});
+function initPushpin() {
+	
+  $('#content').pushpin({
+		top: $("#content").offset().top,
+	});
+	
+  $(".scrollspy").scrollSpy({
+    scrollOffset: 0
   });
-
+	
+}
