@@ -10,8 +10,20 @@ a.active {
 	text-shadow: -2px 2px 1px #ff8f00;
 }
 
+.holder {
+	height: 100vh;
+}
+
 #intro {
 	height: calc(100vh - 64px);
+}
+
+#content {
+	position: relative;
+}
+
+#content .row {
+	margin-bottom: 0;
 }
 
 #portfolio {
@@ -23,7 +35,8 @@ a.active {
 }
 
 .valign-wrapper {
-	height: 100%;
+	height: 100vh;
+	width: 100%;
 }
 
 #contact_header {
@@ -42,12 +55,28 @@ a.active {
 	white-space: nowrap;
 }
 
-.contact_text:any-link {
+.portfolio_text:any-link {
 	text-decoration: none;
 }
 
-#phone_icon {
-	word-spacing: 5px;
+#portfolio_header {
+	font-family: 'Fjalla One', sans-serif;
+	font-weight: bold;
+}
+
+.portfolio_text {
+	margin: 0;
+	padding: 0;
+	font-size: 24pt;
+	line-height: 50px;
+	word-spacing: 20px;
+	font-weight: 100;
+	font-family: 'Fjalla One', sans-serif;
+	white-space: nowrap;
+}
+
+.portfolio_text:any-link {
+	text-decoration: none;
 }
 
 /* mobile size fixes */

@@ -11,8 +11,7 @@ function initMaterialize() {
   
   // pushpin
   $('#content').pushpin({
-    top: $("#content").offset().top,
-    offset: 0
+    top: $("#content").offset().top
 	});
   
   // scrollspy
