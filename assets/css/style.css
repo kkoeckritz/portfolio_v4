@@ -103,7 +103,7 @@
 /* mobile size fixes */
 @media only screen and (max-width: 600px) {
     #intro {
-		height: calc(100vh - 57px);
+		height: calc(100% - 57px);
 	}
 
 	.big_letter {
@@ -113,6 +113,10 @@
 	.nav_text {
 		padding: 0 5px;
 		font-size: 10pt;
+	}
+
+	#portfolio {
+		height: 100%;
 	}
 	
 	#portfolio_header {
@@ -125,6 +129,10 @@
 
 	.portfolio_text {
 		font-size: 12pt;
+	}
+
+	#contact {
+		height: 100%;
 	}
 	
 	#contact_header {
