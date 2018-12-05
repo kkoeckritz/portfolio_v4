@@ -6,12 +6,12 @@
 /* Intro */
 #intro {
 	height: calc(100vh - 64px);
-	z-index: 10;
+	z-index: 1;
 }
 
 .parallax-container {
 	width: 100%;
-	height: 100vh;
+	height: calc(100vh - 64px);
 }
 
 #parallax_image {
@@ -19,11 +19,50 @@
 	height: 125vh;
 }
 
+.raise_z {
+	z-index: 10;
+}
+
+#intro_header {
+	font-family: 'Fjalla One', sans-serif;
+
+	font-weight: bold;
+	text-shadow: -2px 2px 1px #ff8f00;
+}
+
+#intro_change {
+	font-style: italic;
+}
+
+.intro_text {
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 30pt;
+	font-weight: bold;
+	text-shadow: -2px 2px 1px #ff8f00;
+}
+
+.intro_row {
+	width: 100vw;
+}
+
+.intro_valign {
+	bottom: 200px;
+}
+
+.intro_carousel_text {
+	margin: 0;
+	padding: 0;
+	font-size: 18pt !important;
+	font-weight: 100;
+	white-space: nowrap;
+}
+
 #nav_float {
 	position: relative;
 	z-index: 10;
 }
 
+/* navbar */
 #nav_float .row {
 	margin-bottom: 0;
 }
@@ -55,15 +94,11 @@
 }
 
 .portfolio_row {
-	width: 50vw;
+	width: 75vw;
 }
 
-.carousel {
+#portfolio_carousel {
 	border-radius: 10px;
-}
-
-.carousel-item {
-
 }
 
 .indicator-item {
@@ -136,10 +171,24 @@
 	}
 
 	#parallax_image {
-		left: -10px;
-		width: 120%;
-		height: 100vh;
+
+		width: 140%;
+		height: 120vh;
 		filter: blur(5px);
+	}
+	
+	#intro_header {
+		font-family: 'Fjalla One', sans-serif;
+		font-size: 40pt;
+		font-weight: bold;
+		text-shadow: -2px 2px 1px #ff8f00;
+	}
+
+	.intro_text {
+		font-family: 'Fjalla One', sans-serif;
+		font-size: 20pt;
+		font-weight: bold;
+		text-shadow: -1px 1px 1px #ff8f00;
 	}
 
 	.big_letter {

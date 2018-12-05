@@ -1,6 +1,8 @@
 $(document).ready(function(){
   initMaterialize();
-  custom.carousel.slide();
+  custom.carousel.slide("portfolio_carousel");
+  custom.carousel.slide("intro_carousel");
+  custom.text.change();
 });
 
 /**
@@ -9,48 +11,77 @@ $(document).ready(function(){
 function initMaterialize() {
   
   // pushpin
-  $('#nav_float').pushpin({
+  $("#nav_float").pushpin({
     top: $("#nav_float").offset().top
   });
   
-  $('.parallax').parallax();
+  $(".parallax").parallax();
   
   // scrollspy
   $(".scrollspy").scrollSpy({
     scrollOffset: 0
   });
 
-  // carousel
-  $('.carousel.carousel-slider').carousel({
+  // carousels
+  $("#intro_carousel").carousel({
+    fullWidth: true,
+    indicators: false,
+    duration: 500
+  });
+
+  $("#portfolio_carousel").carousel({
     fullWidth: true,
     indicators: true,
-    duration: 800
+    duration: 500
   });
 }
 
 var custom = {
 
   carousel: {
-    elem: null,
-    inst: null,
-    invl: 0,
-    slide: () => {
+    elem: {},
+    inst: {},
+    invl: {},
+    slide: (c_id) => {
 
-      // scroll through carousel every 2 seconds
-      this.elem = document.getElementById("portfolio_carousel");
-      this.inst = M.Carousel.getInstance(this.elem);
-      this.invl = setInterval(() => {
+      // scroll through carousel every 10 seconds
+      custom.carousel.elem[c_id] = document.getElementById(c_id);
+      custom.carousel.inst[c_id] = M.Carousel.getInstance(custom.carousel.elem[c_id]);
+      custom.carousel.invl[c_id] = setInterval(() => {
 
         // slide or cancel interval if touched
-        if (this.inst.pressed || this.inst.dragged) {
-          clearInterval(this.invl);
+        if (c_id != "intro_carousel" && (custom.carousel.inst[c_id].pressed || custom.carousel.inst[c_id].dragged)) {
+          clearInterval(custom.carousel.invl[c_id]);
           console.log("halt!");
-          this.inst.options.duration = 200;
+          custom.carousel.inst[c_id].options.duration = 200;
         } else {
-          this.inst.next();
+          custom.carousel.inst[c_id].next();
           console.log("slide!");
         }
-      }, 4000);
+      }, 10000);
+    }
+  },
+
+  text: {
+    invl: 0,
+    choices: [
+      "Unique",
+      "Beautiful",
+      "Distinctive",
+      "Engaging",
+      "Incredible",
+      "Bold",
+      "Gorgeous"
+    ],
+    change: () => {
+      custom.text.invl = setInterval(() => {
+        $("#intro_change").fadeOut(500, () => {
+          $("#intro_change")
+          .text(custom.text.choices[Math.floor(Math.random() * custom.text.choices.length)])
+          .fadeIn(500);
+          console.log("change!");
+        })
+      }, 5000);
     }
   }
 }
