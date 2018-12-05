@@ -17,13 +17,18 @@
 </head>
 <body>
 	
+	<!-- container for intro, navbar -->
 	<div class="holder blue darken-1">
 
 		<!-- Bio -->
-		<section id="intro" class="scrollspy blue lighten-1"></section>
+		<section id="intro" class="scrollspy blue lighten-1 parallax-container">
+			<div class="parallax">
+				<img src="./assets/images/intro_back.jpg" id="parallax_image">
+			</div>
+		</section>
 
 		<!-- navbar -->
-		<nav id="content">
+		<nav id="nav_float">
 			<div class="nav-wrapper amber darken-1">
 				<div class="row">
 					<div class="col l6 m12 s12 offset-l3">
@@ -62,26 +67,30 @@
 					<h1 id="portfolio_header" class="center block white-text">Selected Projects</h1>
 					<hr class="white-text">
 					<br>
+
 					<div class="row portfolio_row">
-						<div class="col s12 center">
-							<a href="" class="white-text portfolio_link">SoulMate</a><br>
-							<p class="white-text portfolio_text">text</p>
+						<div class="col s12">
+							<div id="portfolio_carousel" class="carousel carousel-slider center">
+								<div class="carousel-item blue darken-2" href="#one!">
+									<h2 class="portfolio_title white-text">Project Title</h2>
+									<p class="white-text portfolio_text">This is your first panel</p>
+								</div>
+								<div class="carousel-item blue darken-2" href="#two!">
+									<h2 class="portfolio_title white-text">Project Title</h2>
+									<p class="white-text portfolio_text">This is your second panel</p>
+								</div>
+								<div class="carousel-item blue darken-2" href="#three!">
+									<h2 class="portfolio_title white-text">Project Title</h2>
+									<p class="white-text portfolio_text">This is your third panel</p>
+								</div>
+								<div class="carousel-item blue darken-2" href="#four!">
+									<h2 class="portfolio_title white-text">Project Title</h2>
+									<p class="white-text portfolio_text">This is your fourth panel</p>
+								</div>
+							</div>
 						</div>
 					</div>
-					<br>
-					<div class="row portfolio_row">
-						<div class="col s12 center">
-							<a href="" class="white-text portfolio_link">link</a><br>
-							<p class="white-text portfolio_text">text</p>
-						</div>
-					</div>
-					<br>
-					<div class="row portfolio_row">
-						<div class="col s12 center">
-							<a href="" class="white-text portfolio_link">link</a><br>
-							<p class="white-text portfolio_text">text</p>
-						</div>
-					</div>
+					
 					
 				</div>
 			</div>

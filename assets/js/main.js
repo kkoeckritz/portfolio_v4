@@ -1,6 +1,6 @@
 $(document).ready(function(){
   initMaterialize();
-  initCustom();
+  custom.carousel.slide();
 });
 
 /**
@@ -9,19 +9,48 @@ $(document).ready(function(){
 function initMaterialize() {
   
   // pushpin
-  $('#content').pushpin({
-    top: $("#content").offset().top
-	});
+  $('#nav_float').pushpin({
+    top: $("#nav_float").offset().top
+  });
+  
+  $('.parallax').parallax();
   
   // scrollspy
   $(".scrollspy").scrollSpy({
     scrollOffset: 0
   });
 
-  // slider
-  $('.slider').slider();
+  // carousel
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true,
+    duration: 800
+  });
 }
 
-function initCustom() {
-  console.log("firing custom funcs");
+var custom = {
+
+  carousel: {
+    elem: null,
+    inst: null,
+    invl: 0,
+    slide: () => {
+
+      // scroll through carousel every 2 seconds
+      this.elem = document.getElementById("portfolio_carousel");
+      this.inst = M.Carousel.getInstance(this.elem);
+      this.invl = setInterval(() => {
+
+        // slide or cancel interval if touched
+        if (this.inst.pressed || this.inst.dragged) {
+          clearInterval(this.invl);
+          console.log("halt!");
+          this.inst.options.duration = 200;
+        } else {
+          this.inst.next();
+          console.log("slide!");
+        }
+      }, 4000);
+    }
+  }
 }
