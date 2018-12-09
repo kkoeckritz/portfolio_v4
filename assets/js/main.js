@@ -1,7 +1,7 @@
 $(document).ready(function(){
   initMaterialize();
+  // custom.carousel.slide("intro_carousel");
   custom.carousel.slide("portfolio_carousel");
-  custom.carousel.slide("intro_carousel");
   custom.text.change();
 });
 
@@ -81,7 +81,7 @@ var custom = {
           .fadeIn(500);
           console.log("change!");
         })
-      }, 5000);
+      }, 10000);
     }
   }
 }

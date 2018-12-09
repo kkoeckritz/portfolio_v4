@@ -23,6 +23,11 @@
 	z-index: 10;
 }
 
+.intro_col {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
 #intro_header {
 	font-family: 'Fjalla One', sans-serif;
 
@@ -54,15 +59,15 @@
 	padding: 0;
 	font-size: 18pt !important;
 	font-weight: 100;
-	white-space: nowrap;
-}
-
-#nav_float {
-	position: relative;
-	z-index: 10;
+	background-color: #ff8f00;
 }
 
 /* navbar */
+#nav_float {
+	position: relative;
+	z-index: 10;
+
+}
 #nav_float .row {
 	margin-bottom: 0;
 }
@@ -107,11 +112,27 @@
 }
 
 .portfolio_title {
-	font-size: 26pt !important;
-	font-weight: 100;
+	font-size: 30pt !important;
+	font-weight: 800;
 	font-family: 'Fjalla One', sans-serif;
-	font-style: italic;
-	white-space: nowrap;
+}
+
+#title_sm {
+	font-family: 'Kaushan Script', cursive;
+}
+
+#title_re_1 {
+	font-family: 'Knewave', cursive;
+	color: white;
+}
+
+#title_re_2 {
+	font-family: 'Knewave', cursive;
+	color: #FFB400;
+}
+
+#title_ss {
+	font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
 }
 
 /* .portfolio_link {
@@ -212,9 +233,9 @@
 		width: 90vw;
 	}
 		
-	/* .portfolio_link {
-		font-size: 18pt;
-	} */
+	.portfolio_title {
+		font-size: 26pt;
+	}
 
 	.portfolio_text {
 		font-size: 12pt;
