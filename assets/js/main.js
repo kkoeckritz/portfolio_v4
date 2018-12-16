@@ -22,18 +22,21 @@ function initMaterialize() {
     scrollOffset: 0
   });
 
-  // carousels
-  $("#intro_carousel").carousel({
-    fullWidth: true,
-    indicators: false,
-    duration: 500
-  });
+  // // carousels
+  // $("#intro_carousel").carousel({
+  //   fullWidth: true,
+  //   indicators: false,
+  //   duration: 500
+  // });
 
   $("#portfolio_carousel").carousel({
     fullWidth: true,
     indicators: true,
-    duration: 500
+    duration: 400
   });
+
+  // modal
+  $('.modal').modal();
 }
 
 var custom = {
