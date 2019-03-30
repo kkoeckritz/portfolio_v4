@@ -109,7 +109,7 @@ body {
 #nav_dummy {
 	position: relative !important;
 	top: 100%;
-	outline: 2px  white;
+	outline: 1px solid white;
 	z-index: 0 !important;
 }
 
