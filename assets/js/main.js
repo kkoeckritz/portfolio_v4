@@ -55,11 +55,11 @@ var custom = {
         // slide or cancel interval if touched
         if (c_id != "intro_carousel" && (custom.carousel.inst[c_id].pressed || custom.carousel.inst[c_id].dragged)) {
           clearInterval(custom.carousel.invl[c_id]);
-          console.log("halt!");
+          // console.log("halt!");
           custom.carousel.inst[c_id].options.duration = 200;
         } else {
           custom.carousel.inst[c_id].next();
-          console.log("slide!");
+          // console.log("slide!");
         }
       }, 10000);
     }
@@ -68,13 +68,13 @@ var custom = {
   text: {
     invl: 0,
     choices: [
-      "Unique",
-      "Beautiful",
-      "Distinctive",
-      "Engaging",
-      "Incredible",
-      "Bold",
-      "Gorgeous"
+      "Unique?",
+      "Beautiful?",
+      "Distinctive?",
+      "Engaging?",
+      "Incredible?",
+      "Bold?",
+      "Spectacular?"
     ],
     change: () => {
       custom.text.invl = setInterval(() => {
@@ -82,7 +82,7 @@ var custom = {
           $("#intro_change")
           .text(custom.text.choices[Math.floor(Math.random() * custom.text.choices.length)])
           .fadeIn(500);
-          console.log("change!");
+          // console.log("change!");
         })
       }, 10000);
     }

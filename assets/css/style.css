@@ -109,7 +109,7 @@ body {
 #nav_dummy {
 	position: relative !important;
 	top: 100%;
-	outline: 2px solid white;
+	outline: 2px  white;
 	z-index: 0 !important;
 }
 
@@ -185,7 +185,7 @@ body {
 
 .title_ss {
 	font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
-	font-weight: 500 !important;
+	font-weight: 700 !important;
 }
 
 /* .portfolio_link {
